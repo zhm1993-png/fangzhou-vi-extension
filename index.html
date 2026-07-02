@@ -1,0 +1,2043 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>芳洲国际文化科创中心 VI 视觉延展方案</title>
+  <style>
+    :root {
+      --blue: #2f5fa8;
+      --orange: #f57920;
+      --yellow: #ffc43d;
+      --ink: #15171c;
+      --muted: #666d7a;
+      --line: #dfe3ea;
+      --paper: #ffffff;
+      --soft: #f4f6f9;
+      --dark: #111827;
+      --grid: 12px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      letter-spacing: 0;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 14px 28px;
+      background: rgba(255, 255, 255, .94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(16px);
+    }
+
+    .brand-mini {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 260px;
+    }
+
+    .brand-mini img {
+      width: 34px;
+      height: auto;
+    }
+
+    .brand-mini strong {
+      font-size: 15px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .nav {
+      display: flex;
+      gap: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .nav a:hover {
+      color: var(--blue);
+    }
+
+    .hero {
+      min-height: 86vh;
+      display: grid;
+      align-items: center;
+      padding: 72px 28px 54px;
+      background:
+        linear-gradient(90deg, rgba(47, 95, 168, .08) 0 1px, transparent 1px 100%),
+        linear-gradient(0deg, rgba(47, 95, 168, .06) 0 1px, transparent 1px 100%),
+        #fff;
+      background-size: 48px 48px;
+    }
+
+    .hero-inner {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.02fr .98fr;
+      gap: 62px;
+      align-items: center;
+    }
+
+    .hero-copy h1 {
+      margin: 0;
+      font-size: clamp(40px, 6vw, 92px);
+      line-height: .98;
+      font-weight: 900;
+      max-width: 740px;
+    }
+
+    .hero-copy p {
+      margin: 28px 0 0;
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 19px;
+      line-height: 1.75;
+    }
+
+    .hero-principle {
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border-top: 3px solid var(--blue);
+      border-bottom: 3px solid var(--orange);
+    }
+
+    .hero-principle span {
+      padding: 14px 10px;
+      font-size: 13px;
+      font-weight: 800;
+      text-align: center;
+      border-right: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .hero-principle span:last-child {
+      border-right: 0;
+    }
+
+    .hero-logo {
+      display: grid;
+      place-items: center;
+      min-height: 520px;
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+
+    .hero-logo img {
+      width: min(72%, 390px);
+      height: auto;
+    }
+
+    .section {
+      padding: 86px 28px;
+      border-top: 1px solid var(--line);
+    }
+
+    .section.alt {
+      background: var(--soft);
+    }
+
+    .section.dark {
+      background: var(--dark);
+      color: #fff;
+      border-top: 0;
+    }
+
+    .wrap {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 36px;
+      margin-bottom: 42px;
+    }
+
+    .section-no {
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .section.dark .section-no {
+      color: var(--yellow);
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(30px, 3.4vw, 48px);
+      line-height: 1.08;
+      font-weight: 900;
+    }
+
+    .lead {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.8;
+      max-width: 780px;
+    }
+
+    .section.dark .lead {
+      color: rgba(255, 255, 255, .72);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .panel,
+    .sample,
+    .rule {
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+
+    .panel {
+      padding: 28px;
+    }
+
+    .panel h3,
+    .sample h3,
+    .rule h3 {
+      margin: 0 0 14px;
+      font-size: 19px;
+      line-height: 1.35;
+    }
+
+    .panel p,
+    .sample p,
+    .rule p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .lockup {
+      min-height: 260px;
+      display: grid;
+      place-items: center;
+      background:
+        linear-gradient(90deg, rgba(21, 23, 28, .05) 0 1px, transparent 1px 100%),
+        linear-gradient(0deg, rgba(21, 23, 28, .05) 0 1px, transparent 1px 100%),
+        #fff;
+      background-size: 24px 24px;
+      border: 1px solid var(--line);
+      padding: 30px;
+    }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .logo-row img {
+      width: 76px;
+    }
+
+    .logo-stack {
+      display: grid;
+      justify-items: center;
+      gap: 18px;
+      text-align: center;
+    }
+
+    .logo-stack img {
+      width: 86px;
+    }
+
+    .cn-name {
+      font-size: 25px;
+      font-weight: 900;
+      line-height: 1.15;
+      white-space: nowrap;
+    }
+
+    .en-name {
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      max-width: 410px;
+    }
+
+    .logo-only img {
+      width: 116px;
+    }
+
+    .dark-lockup {
+      background: var(--dark);
+      border-color: rgba(255, 255, 255, .18);
+      color: #fff;
+    }
+
+    .dark-lockup .en-name {
+      color: rgba(255, 255, 255, .72);
+    }
+
+    .spec-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .spec-list li {
+      display: grid;
+      grid-template-columns: 86px 1fr;
+      gap: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+    }
+
+    .spec-list b {
+      color: var(--ink);
+    }
+
+    .genes {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 32px;
+      align-items: stretch;
+    }
+
+    .source-logo {
+      display: grid;
+      place-items: center;
+      min-height: 520px;
+      background: #fff;
+      border: 1px solid var(--line);
+      padding: 42px;
+    }
+
+    .source-logo img {
+      width: min(82%, 330px);
+    }
+
+    .gene-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .gene-item {
+      min-height: 250px;
+      padding: 22px;
+      background: #fff;
+      border: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    .gene-mark {
+      height: 120px;
+      position: relative;
+      margin-bottom: 24px;
+    }
+
+    .bar-v {
+      width: 32px;
+      height: 110px;
+      background: var(--blue);
+    }
+
+    .bar-h {
+      width: 160px;
+      height: 32px;
+      background: var(--blue);
+    }
+
+    .bar-o {
+      width: 170px;
+      height: 28px;
+      background: var(--orange);
+    }
+
+    .bar-y {
+      width: 148px;
+      height: 46px;
+      background: var(--yellow);
+      transform: rotate(-32deg);
+      transform-origin: center;
+      margin: 44px 0 0 14px;
+    }
+
+    .pattern-field {
+      height: 164px;
+      background:
+        linear-gradient(90deg, transparent 0 28px, rgba(47, 95, 168, .22) 28px 36px, transparent 36px 64px),
+        linear-gradient(0deg, transparent 0 36px, rgba(245, 121, 32, .24) 36px 44px, transparent 44px 72px),
+        #fff;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
+
+    .pattern-field::after {
+      content: "";
+      position: absolute;
+      width: 130px;
+      height: 36px;
+      right: 34px;
+      top: 62px;
+      background: var(--yellow);
+      transform: rotate(-32deg);
+    }
+
+    .swatch {
+      min-height: 190px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      color: #fff;
+    }
+
+    .swatch.blue {
+      background: var(--blue);
+    }
+
+    .swatch.orange {
+      background: var(--orange);
+    }
+
+    .swatch.yellow {
+      background: var(--yellow);
+      color: var(--ink);
+    }
+
+    .swatch strong {
+      font-size: 20px;
+    }
+
+    .swatch span {
+      margin-top: 8px;
+      font-size: 13px;
+      opacity: .86;
+    }
+
+    .type-system {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    .type-demo {
+      padding: 30px;
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+
+    .type-demo .big {
+      font-size: 42px;
+      line-height: 1.1;
+      font-weight: 900;
+    }
+
+    .type-demo .small {
+      margin-top: 18px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .layout-system {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .layout-board {
+      min-height: 520px;
+      background:
+        linear-gradient(90deg, rgba(47, 95, 168, .12) 0 1px, transparent 1px 100%),
+        linear-gradient(0deg, rgba(47, 95, 168, .08) 0 1px, transparent 1px 100%),
+        #fff;
+      background-size: 64px 64px;
+      border: 1px solid var(--line);
+      padding: 38px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .layout-board .blue-rail {
+      position: absolute;
+      left: 38px;
+      top: 38px;
+      width: 34px;
+      height: calc(100% - 76px);
+      background: var(--blue);
+    }
+
+    .layout-board .title-line {
+      margin-left: 76px;
+      height: 48px;
+      background: var(--blue);
+      width: 68%;
+    }
+
+    .layout-board .image-zone {
+      margin: 82px 0 0 76px;
+      height: 210px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      position: relative;
+    }
+
+    .layout-board .accent {
+      position: absolute;
+      width: 210px;
+      height: 58px;
+      right: 42px;
+      top: 196px;
+      background: var(--yellow);
+      transform: rotate(-32deg);
+    }
+
+    .layout-board .info-line {
+      margin: 42px 0 0 76px;
+      height: 44px;
+      background: var(--orange);
+      width: 82%;
+    }
+
+    .rules {
+      display: grid;
+      gap: 16px;
+    }
+
+    .rule {
+      padding: 22px;
+    }
+
+    .samples {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .sample {
+      overflow: hidden;
+    }
+
+    .sample-visual {
+      min-height: 280px;
+      background: #fff;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sample-body {
+      padding: 20px;
+    }
+
+    .card-visual {
+      display: grid;
+      place-items: center;
+      background: var(--soft);
+    }
+
+    .business-card {
+      width: 82%;
+      aspect-ratio: 1.72;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: 0 16px 44px rgba(17, 24, 39, .12);
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .business-card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 18px;
+      height: 100%;
+      background: var(--blue);
+    }
+
+    .business-card .logo-row {
+      gap: 14px;
+      margin-left: 18px;
+    }
+
+    .business-card img {
+      width: 38px;
+    }
+
+    .business-card .cn-name {
+      font-size: 15px;
+    }
+
+    .business-card .en-name {
+      font-size: 6px;
+      max-width: 220px;
+    }
+
+    .contact-lines {
+      margin-left: 18px;
+      display: grid;
+      gap: 7px;
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .ppt-visual {
+      background: var(--dark);
+      padding: 32px;
+      color: #fff;
+    }
+
+    .ppt-visual img {
+      width: 70px;
+      position: absolute;
+      right: 34px;
+      top: 30px;
+    }
+
+    .ppt-title {
+      position: absolute;
+      left: 34px;
+      bottom: 42px;
+      font-size: 32px;
+      line-height: 1.05;
+      font-weight: 900;
+      max-width: 380px;
+    }
+
+    .ppt-visual::before {
+      content: "";
+      position: absolute;
+      left: 34px;
+      top: 34px;
+      width: 38px;
+      height: 170px;
+      background: var(--blue);
+    }
+
+    .ppt-visual::after {
+      content: "";
+      position: absolute;
+      right: 60px;
+      bottom: 78px;
+      width: 260px;
+      height: 64px;
+      background: var(--yellow);
+      transform: rotate(-32deg);
+    }
+
+    .badge-visual {
+      display: grid;
+      place-items: center;
+      background: var(--soft);
+    }
+
+    .badge {
+      width: 42%;
+      min-width: 170px;
+      height: 230px;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: 0 16px 44px rgba(17, 24, 39, .12);
+      padding: 18px;
+      position: relative;
+    }
+
+    .badge::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 14px;
+      width: 100%;
+      background: var(--blue);
+    }
+
+    .badge img {
+      width: 46px;
+      margin: 24px auto 22px;
+    }
+
+    .badge .name {
+      font-size: 22px;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .badge .role {
+      margin-top: 8px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .badge .bottom {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      height: 18px;
+      background: var(--orange);
+    }
+
+    .bag-visual {
+      display: grid;
+      place-items: center;
+      background:
+        linear-gradient(90deg, rgba(47, 95, 168, .08) 0 1px, transparent 1px 100%),
+        linear-gradient(0deg, rgba(47, 95, 168, .05) 0 1px, transparent 1px 100%),
+        #f8fafc;
+      background-size: 28px 28px;
+    }
+
+    .bag-set {
+      display: flex;
+      align-items: end;
+      justify-content: center;
+      gap: 44px;
+      width: 100%;
+    }
+
+    .bag {
+      width: 176px;
+      height: 218px;
+      border: 1px solid var(--line);
+      background: #fff;
+      position: relative;
+      box-shadow: 0 22px 54px rgba(17, 24, 39, .16);
+      overflow: visible;
+    }
+
+    .bag::before {
+      content: "";
+      position: absolute;
+      left: 50px;
+      top: -34px;
+      width: 76px;
+      height: 58px;
+      border: 4px solid #cfd5df;
+      border-bottom: 0;
+      border-radius: 90px 90px 0 0;
+      z-index: 0;
+    }
+
+    .bag::after {
+      content: "";
+      position: absolute;
+      right: -22px;
+      top: 22px;
+      width: 22px;
+      height: 196px;
+      background: linear-gradient(180deg, #244f94, var(--blue));
+      transform: skewY(-10deg);
+      transform-origin: left top;
+      box-shadow: inset 8px 0 0 rgba(255, 255, 255, .12);
+    }
+
+    .bag img {
+      width: 42px;
+      margin: 44px auto 12px;
+    }
+
+    .bag .band {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 48px;
+      background: var(--orange);
+    }
+
+    .bag .bag-name {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      font-weight: 900;
+      font-size: 12px;
+      line-height: 1.28;
+    }
+
+    .bag .bag-en {
+      position: relative;
+      z-index: 1;
+      margin-top: 6px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 6px;
+      font-weight: 700;
+      letter-spacing: .08em;
+    }
+
+    .bag .bag-accent {
+      position: absolute;
+      right: 16px;
+      bottom: 62px;
+      width: 74px;
+      height: 18px;
+      background: var(--yellow);
+      transform: rotate(-32deg);
+      z-index: 0;
+    }
+
+    .bag.solid {
+      background: var(--dark);
+      border-color: rgba(255, 255, 255, .18);
+      color: #fff;
+    }
+
+    .bag.solid::after {
+      background: linear-gradient(180deg, #244f94, var(--blue));
+    }
+
+    .bag.solid .bag-en {
+      color: rgba(255, 255, 255, .68);
+    }
+
+    .bag.solid .band {
+      background: var(--blue);
+    }
+
+    .bag.solid .bag-accent {
+      background: var(--orange);
+    }
+
+    .wall-visual {
+      background: #f7f8fb;
+      padding: 26px;
+    }
+
+    .wall {
+      height: 230px;
+      background: #fff;
+      border: 1px solid var(--line);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .wall::before {
+      content: "";
+      position: absolute;
+      left: 36px;
+      top: 28px;
+      width: 28px;
+      height: 170px;
+      background: var(--blue);
+    }
+
+    .wall::after {
+      content: "";
+      position: absolute;
+      right: 44px;
+      top: 96px;
+      width: 180px;
+      height: 46px;
+      background: var(--yellow);
+      transform: rotate(-32deg);
+    }
+
+    .wall .wall-brand {
+      position: absolute;
+      left: 92px;
+      top: 70px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .wall img {
+      width: 64px;
+    }
+
+    .wayfinding-visual {
+      display: grid;
+      place-items: center;
+      background: var(--dark);
+    }
+
+    .sign {
+      width: 76%;
+      min-height: 168px;
+      background: #fff;
+      padding: 26px;
+      position: relative;
+    }
+
+    .sign::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 24px;
+      height: 100%;
+      background: var(--blue);
+    }
+
+    .sign .arrow {
+      position: absolute;
+      right: 26px;
+      top: 50%;
+      width: 112px;
+      height: 28px;
+      background: var(--orange);
+      transform: translateY(-50%);
+    }
+
+    .sign .arrow::after {
+      content: "";
+      position: absolute;
+      right: -22px;
+      top: -10px;
+      border-left: 24px solid var(--orange);
+      border-top: 24px solid transparent;
+      border-bottom: 24px solid transparent;
+    }
+
+    .sign h4 {
+      margin: 10px 0 6px 34px;
+      font-size: 30px;
+    }
+
+    .sign p {
+      margin-left: 34px;
+      color: var(--muted);
+    }
+
+    .poster-visual {
+      background: var(--soft);
+      display: grid;
+      place-items: center;
+    }
+
+    .poster {
+      width: 50%;
+      min-width: 190px;
+      aspect-ratio: .72;
+      background: #fff;
+      border: 1px solid var(--line);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 16px 44px rgba(17, 24, 39, .12);
+      padding: 26px;
+    }
+
+    .poster img {
+      width: 54px;
+    }
+
+    .poster h4 {
+      position: absolute;
+      left: 26px;
+      bottom: 74px;
+      right: 26px;
+      margin: 0;
+      font-size: 30px;
+      line-height: 1.05;
+    }
+
+    .poster .poster-band {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 42px;
+      background: var(--orange);
+    }
+
+    .poster .poster-accent {
+      position: absolute;
+      right: -28px;
+      top: 118px;
+      width: 190px;
+      height: 54px;
+      background: var(--yellow);
+      transform: rotate(-32deg);
+    }
+
+    .social-visual {
+      background: #fff;
+      display: grid;
+      place-items: center;
+    }
+
+    .social {
+      width: 78%;
+      aspect-ratio: 1.78;
+      background: var(--blue);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 30px;
+    }
+
+    .social img {
+      width: 54px;
+      filter: none;
+      background: #fff;
+      padding: 8px;
+    }
+
+    .social h4 {
+      position: absolute;
+      left: 30px;
+      bottom: 34px;
+      margin: 0;
+      font-size: 30px;
+      line-height: 1.1;
+    }
+
+    .social::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 38%;
+      height: 100%;
+      background: var(--orange);
+    }
+
+    .social::after {
+      content: "";
+      position: absolute;
+      right: 48px;
+      top: 92px;
+      width: 190px;
+      height: 54px;
+      background: var(--yellow);
+      transform: rotate(-32deg);
+    }
+
+    .material-system {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .material-board {
+      min-height: 500px;
+      background: #fff;
+      border: 1px solid var(--line);
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .material-board::before {
+      content: "";
+      position: absolute;
+      left: 28px;
+      top: 28px;
+      width: 30px;
+      height: calc(100% - 56px);
+      background: var(--blue);
+    }
+
+    .material-card {
+      position: absolute;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: 0 16px 44px rgba(17, 24, 39, .1);
+      overflow: hidden;
+    }
+
+    .material-card img {
+      width: 42px;
+    }
+
+    .letterhead {
+      left: 92px;
+      top: 44px;
+      width: 58%;
+      height: 290px;
+      padding: 28px;
+    }
+
+    .letterhead .thin-line {
+      height: 8px;
+      margin-top: 34px;
+      background: var(--orange);
+      width: 72%;
+    }
+
+    .letterhead .text-line {
+      height: 8px;
+      margin-top: 16px;
+      background: #d8dde6;
+    }
+
+    .folder-card {
+      right: 32px;
+      bottom: 42px;
+      width: 42%;
+      height: 230px;
+      background: var(--dark);
+      color: #fff;
+      padding: 24px;
+    }
+
+    .folder-card img {
+      width: 52px;
+    }
+
+    .folder-card::after {
+      content: "";
+      position: absolute;
+      right: -26px;
+      bottom: 56px;
+      width: 170px;
+      height: 44px;
+      background: var(--yellow);
+      transform: rotate(-32deg);
+    }
+
+    .folder-card h4,
+    .comm-item h3 {
+      letter-spacing: 0;
+    }
+
+    .folder-card h4 {
+      position: absolute;
+      left: 24px;
+      bottom: 24px;
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.15;
+      z-index: 2;
+    }
+
+    .envelope-card {
+      left: 112px;
+      bottom: 42px;
+      width: 250px;
+      height: 116px;
+      padding: 22px;
+    }
+
+    .envelope-card::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 16px;
+      background: var(--orange);
+    }
+
+    .material-notes {
+      display: grid;
+      gap: 16px;
+    }
+
+    .material-note {
+      background: #fff;
+      border: 1px solid var(--line);
+      padding: 22px;
+    }
+
+    .material-note h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .material-note p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .communication-board {
+      min-height: 520px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .comm-item {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #fff;
+      min-height: 250px;
+      padding: 24px;
+    }
+
+    .comm-item img {
+      width: 48px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .comm-item h3 {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 28px;
+      z-index: 2;
+      margin: 0;
+      font-size: 26px;
+      line-height: 1.12;
+    }
+
+    .comm-item p {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 92px;
+      z-index: 2;
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .comm-item.poster-system::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 42px;
+      background: var(--orange);
+    }
+
+    .comm-item.poster-system::after {
+      content: "";
+      position: absolute;
+      right: -36px;
+      top: 88px;
+      width: 190px;
+      height: 50px;
+      background: var(--yellow);
+      transform: rotate(-32deg);
+    }
+
+    .comm-item.poster-system h3 {
+      bottom: 58px;
+    }
+
+    .comm-item.poster-system p {
+      bottom: 126px;
+    }
+
+    .comm-item.screen-system {
+      background: var(--dark);
+      color: #fff;
+    }
+
+    .comm-item.screen-system p {
+      color: rgba(255, 255, 255, .72);
+    }
+
+    .comm-item.screen-system img {
+      width: 54px;
+    }
+
+    .comm-item.screen-system::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 34%;
+      height: 100%;
+      background: var(--orange);
+    }
+
+    .comm-item.invite-system::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 24px;
+      height: 100%;
+      background: var(--blue);
+    }
+
+    .comm-item.social-system::after {
+      content: "";
+      position: absolute;
+      right: 24px;
+      bottom: 34px;
+      width: 122px;
+      height: 34px;
+      background: var(--yellow);
+      transform: rotate(-32deg);
+    }
+
+    .forbid-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .forbid {
+      min-height: 170px;
+      padding: 18px;
+      background: #fff;
+      border: 1px solid var(--line);
+      position: relative;
+      display: grid;
+      align-content: end;
+      gap: 10px;
+      overflow: hidden;
+    }
+
+    .forbid::before {
+      content: "";
+      position: absolute;
+      left: 30px;
+      top: 48px;
+      width: calc(100% - 60px);
+      height: 3px;
+      background: #d92626;
+      transform: rotate(-10deg);
+      transform-origin: center;
+    }
+
+    .forbid strong {
+      font-size: 15px;
+    }
+
+    .forbid span {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .deliver {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .deliver div {
+      padding: 18px;
+      min-height: 114px;
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(255, 255, 255, .16);
+    }
+
+    .deliver strong {
+      display: block;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .deliver span {
+      color: rgba(255, 255, 255, .68);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .footer {
+      padding: 34px 28px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+    }
+
+    .footer .wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    @media (max-width: 980px) {
+      .topbar {
+        position: static;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+      }
+
+      .hero-inner,
+      .section-head,
+      .genes,
+      .layout-system,
+      .material-system,
+      .grid-2,
+      .grid-3,
+      .type-system,
+      .samples {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-logo,
+      .source-logo {
+        min-height: 360px;
+      }
+
+      .hero-principle,
+      .grid-4,
+      .communication-board,
+      .forbid-grid,
+      .deliver {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero,
+      .section {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .hero-inner {
+        gap: 32px;
+      }
+
+      .hero-principle,
+      .grid-4,
+      .gene-grid,
+      .communication-board,
+      .forbid-grid,
+      .deliver {
+        grid-template-columns: 1fr;
+      }
+
+      .logo-row {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .cn-name {
+        white-space: normal;
+        font-size: 21px;
+      }
+
+      .layout-board {
+        min-height: 430px;
+      }
+
+      .material-board {
+        min-height: 560px;
+      }
+
+      .letterhead {
+        left: 70px;
+        width: calc(100% - 98px);
+      }
+
+      .folder-card {
+        right: 20px;
+        width: 54%;
+      }
+
+      .envelope-card {
+        left: 82px;
+        width: 190px;
+      }
+
+      .footer .wrap {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand-mini" href="#top" aria-label="返回顶部">
+      <img src="logo.png" alt="芳洲国际文化科创中心标志">
+      <strong>芳洲国际文化科创中心 VI 延展</strong>
+    </a>
+    <nav class="nav" aria-label="页面导航">
+      <a href="#lockup">标志组合</a>
+      <a href="#genes">图形系统</a>
+      <a href="#color">色彩字体</a>
+      <a href="#layout">版式</a>
+      <a href="#samples">重点样机</a>
+      <a href="#office">办公物料</a>
+      <a href="#communication">传播物料</a>
+      <a href="#rules">延展边界</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <h1>芳洲国际文化科创中心 VI 视觉延展方案</h1>
+          <p>第一轮以“方案框架 + 重点样机”为目标。原 logo 作为唯一正式标志源文件，所有延展只围绕组合规范、图形语言、版式秩序和物料应用展开。</p>
+          <div class="hero-principle" aria-label="标志使用原则">
+            <span>不改形</span>
+            <span>不改色</span>
+            <span>不改比例</span>
+            <span>不改角度</span>
+          </div>
+        </div>
+        <div class="hero-logo" aria-label="原始标志展示">
+          <img src="logo.png" alt="原始 FZ 标志">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="lockup">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-no">01 / LOGO LOCKUP</div>
+          <div>
+            <h2>先建立图形标志与文字的组合关系</h2>
+            <p class="lead">logo 不动，设计重点放在“怎么和中文、英文名称并置”。这一页用于确定日后所有物料中的品牌抬头方式。</p>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="panel">
+            <div class="lockup">
+              <div class="logo-row">
+                <img src="logo.png" alt="FZ 标志">
+                <div>
+                  <div class="cn-name">芳洲国际文化科创中心</div>
+                  <div class="en-name">FANGZHOU INTERNATIONAL CULTURE &amp; TECH INNOVATION CENTER</div>
+                </div>
+              </div>
+            </div>
+            <ul class="spec-list">
+              <li><b>横版主标</b><span>用于门头、PPT 首页、正式文件、公众号头图。图形在左，中文在上，英文在下。</span></li>
+              <li><b>比例建议</b><span>图形高度约等于中文高度的 2.2-2.6 倍，图文间距保持一个 logo 内部白边宽度以上。</span></li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <div class="lockup">
+              <div class="logo-stack">
+                <img src="logo.png" alt="FZ 标志">
+                <div>
+                  <div class="cn-name">芳洲国际文化科创中心</div>
+                  <div class="en-name">FANGZHOU CULTURE &amp; TECH</div>
+                </div>
+              </div>
+            </div>
+            <ul class="spec-list">
+              <li><b>竖版组合</b><span>用于胸牌、手提袋、空间墙面中心构图和窄幅画面。</span></li>
+              <li><b>短英文版</b><span>当画面宽度不足时，英文使用短版，避免小字号英文变成噪声。</span></li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <div class="lockup">
+              <div class="logo-only">
+                <img src="logo.png" alt="FZ 标志单独使用">
+              </div>
+            </div>
+            <ul class="spec-list">
+              <li><b>图形单独版</b><span>用于头像、图标、印章式识别、小尺寸标签。只在品牌名称已经出现的场景使用。</span></li>
+              <li><b>使用边界</b><span>不能重新拆分后作为新 logo 使用，不能改变原始图形的比例与颜色。</span></li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <div class="lockup dark-lockup">
+              <div class="logo-row">
+                <img src="logo-transparent.png" alt="透明底 FZ 标志">
+                <div>
+                  <div class="cn-name">芳洲国际文化科创中心</div>
+                  <div class="en-name">FANGZHOU INTERNATIONAL CULTURE &amp; TECH INNOVATION CENTER</div>
+                </div>
+              </div>
+            </div>
+            <ul class="spec-list">
+              <li><b>深色底应用</b><span>深色背景上使用透明底原彩 logo，只保留蓝、橙、黄五个色块。</span></li>
+              <li><b>反白规则</b><span>除非制作工艺限制，不建议把三色 logo 改成纯白图形。</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="genes">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-no">02 / VISUAL GENES</div>
+          <div>
+            <h2>从原 logo 中提取视觉基因</h2>
+            <p class="lead">辅助图形只提取色块关系、方向感和几何秩序。它们服务版式和空间表达，不承担标志识别功能。</p>
+          </div>
+        </div>
+
+        <div class="genes">
+          <div class="source-logo">
+            <img src="logo.png" alt="原始 FZ 标志">
+          </div>
+          <div class="gene-grid">
+            <div class="gene-item">
+              <div class="gene-mark"><div class="bar-v"></div></div>
+              <div>
+                <h3>蓝色竖向结构</h3>
+                <p>作为空间支撑、信息栏、版式边界和导视起点，负责稳定感。</p>
+              </div>
+            </div>
+            <div class="gene-item">
+              <div class="gene-mark"><div class="bar-h"></div></div>
+              <div>
+                <h3>蓝色横向结构</h3>
+                <p>用于标题承托、页面主轴和横向导览，建立理性秩序。</p>
+              </div>
+            </div>
+            <div class="gene-item">
+              <div class="gene-mark"><div class="bar-o"></div></div>
+              <div>
+                <h3>橙色连接结构</h3>
+                <p>用于重点信息、活动标题、路线提示和行动入口，增强活力。</p>
+              </div>
+            </div>
+            <div class="gene-item">
+              <div class="gene-mark"><div class="bar-y"></div></div>
+              <div>
+                <h3>黄色倾斜模块</h3>
+                <p>用于创新、转化、实验感的视觉表达，控制出现频率，避免喧宾夺主。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-top:24px">
+          <div class="panel">
+            <div class="pattern-field" aria-hidden="true"></div>
+            <ul class="spec-list">
+              <li><b>重复图案</b><span>用于包装纸、手提袋内衬、玻璃贴、展墙局部。密度要低，保留白底呼吸感。</span></li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>图形使用原则</h3>
+            <p>辅助图形可以放大、裁切、重复、转化为边框或信息区，但不能与品牌名称组合成新的标志。正式识别始终回到原始 logo。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="color">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-no">03 / COLOR & TYPE</div>
+          <div>
+            <h2>色彩与字体保持清晰、年轻、可信赖</h2>
+            <p class="lead">主色从 logo 中延展，辅助中性色用于信息承载。字体采用现代无衬线，保证空间导视、屏幕和印刷物料都有稳定识别。</p>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div class="swatch blue"><strong>科技蓝</strong><span>#2F5FA8 / 平台、结构、理性</span></div>
+          <div class="swatch orange"><strong>活力橙</strong><span>#F57920 / 强调、活动、连接</span></div>
+          <div class="swatch yellow"><strong>创新黄</strong><span>#FFC43D / 动势、灵感、实验</span></div>
+        </div>
+
+        <div class="type-system">
+          <div class="type-demo">
+            <div class="big">芳洲国际文化科创中心</div>
+            <div class="small">中文建议使用思源黑体、阿里巴巴普惠体、苹方或同类现代无衬线。标题用中黑至粗黑，正文使用常规字重。</div>
+          </div>
+          <div class="type-demo">
+            <div class="big">FANGZHOU<br>CULTURE &amp; TECH</div>
+            <div class="small">英文使用 Helvetica Neue、Inter、Arial 或同类中性无衬线。英文短版适合小尺寸物料和数字端。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="layout">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-no">04 / LAYOUT SYSTEM</div>
+          <div>
+            <h2>用 logo 的竖横关系建立版式骨架</h2>
+            <p class="lead">版式不是随意摆色块，而是把蓝色结构作为稳定框架，橙色作为信息强调，黄色倾斜模块作为视觉动势。</p>
+          </div>
+        </div>
+
+        <div class="layout-system">
+          <div class="layout-board" aria-label="版式系统示意">
+            <div class="blue-rail"></div>
+            <div class="title-line"></div>
+            <div class="image-zone"></div>
+            <div class="accent"></div>
+            <div class="info-line"></div>
+          </div>
+          <div class="rules">
+            <div class="rule">
+              <h3>蓝色用于骨架</h3>
+              <p>适合做左侧竖栏、顶部标题条、导视主轴。它负责让画面有秩序。</p>
+            </div>
+            <div class="rule">
+              <h3>橙色用于信息强调</h3>
+              <p>用于日期、地点、活动主题、箭头方向和重点按钮，不大面积铺满。</p>
+            </div>
+            <div class="rule">
+              <h3>黄色用于创新动势</h3>
+              <p>保持倾斜状态，作为画面中的“变化点”。出现越少，识别越强。</p>
+            </div>
+            <div class="rule">
+              <h3>白底用于开放感</h3>
+              <p>大量留白能让三色更干净，也符合文化科创中心的空间气质。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="samples">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-no">05 / KEY MOCKUPS</div>
+          <div>
+            <h2>第一轮重点样机</h2>
+            <p class="lead">这些样机用于汇报和确认系统可落地性。每个场景都使用同一套图形语言，避免为单个物料临时造风格。</p>
+          </div>
+        </div>
+
+        <div class="samples">
+          <article class="sample">
+            <div class="sample-visual card-visual">
+              <div class="business-card">
+                <div class="logo-row">
+                  <img src="logo.png" alt="FZ 标志">
+                  <div>
+                    <div class="cn-name">芳洲国际文化科创中心</div>
+                    <div class="en-name">FANGZHOU CULTURE &amp; TECH</div>
+                  </div>
+                </div>
+                <div class="contact-lines">
+                  <span>MIYA / BRAND DESIGN</span>
+                  <span>culture · technology · innovation</span>
+                </div>
+              </div>
+            </div>
+            <div class="sample-body">
+              <h3>名片</h3>
+              <p>左侧蓝色结构做识别边界，logo 与字标横版组合，信息区保持克制。</p>
+            </div>
+          </article>
+
+          <article class="sample">
+            <div class="sample-visual ppt-visual">
+              <img src="logo-transparent.png" alt="透明底 FZ 标志">
+              <div class="ppt-title">文化科创<br>年度路演</div>
+            </div>
+            <div class="sample-body">
+              <h3>PPT 封面</h3>
+              <p>深色背景提升科技感，黄色倾斜模块制造视觉动势，适合路演和汇报。</p>
+            </div>
+          </article>
+
+          <article class="sample">
+            <div class="sample-visual badge-visual">
+              <div class="badge">
+                <img src="logo.png" alt="FZ 标志">
+                <div class="name">访客证</div>
+                <div class="role">VISITOR PASS</div>
+                <div class="bottom"></div>
+              </div>
+            </div>
+            <div class="sample-body">
+              <h3>工牌 / 胸牌</h3>
+              <p>竖版组合适合小尺寸垂直物料，顶部蓝色条用于分类识别。</p>
+            </div>
+          </article>
+
+          <article class="sample">
+            <div class="sample-visual bag-visual">
+              <div class="bag-set">
+                <div class="bag">
+                  <img src="logo.png" alt="FZ 标志">
+                  <div class="bag-name">芳洲国际文化<br>科创中心</div>
+                  <div class="bag-en">FANGZHOU CULTURE &amp; TECH</div>
+                  <div class="bag-accent"></div>
+                  <div class="band"></div>
+                </div>
+                <div class="bag solid">
+                  <img src="logo-transparent.png" alt="透明底 FZ 标志">
+                  <div class="bag-name">芳洲国际文化<br>科创中心</div>
+                  <div class="bag-en">FANGZHOU CULTURE &amp; TECH</div>
+                  <div class="bag-accent"></div>
+                  <div class="band"></div>
+                </div>
+              </div>
+            </div>
+            <div class="sample-body">
+              <h3>手提袋</h3>
+              <p>提供白底版和深色纯色版。logo 与中英文缩小，保留手柄、侧边和底部色块关系。</p>
+            </div>
+          </article>
+
+          <article class="sample">
+            <div class="sample-visual wall-visual">
+              <div class="wall">
+                <div class="wall-brand">
+                  <img src="logo.png" alt="FZ 标志">
+                  <div>
+                    <div class="cn-name">芳洲国际文化科创中心</div>
+                    <div class="en-name">FANGZHOU INTERNATIONAL CULTURE &amp; TECH INNOVATION CENTER</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sample-body">
+              <h3>前台背景墙</h3>
+              <p>横版组合用于正式空间入口，辅助图形放在边缘和远端，避免干扰识别。</p>
+            </div>
+          </article>
+
+          <article class="sample">
+            <div class="sample-visual wayfinding-visual">
+              <div class="sign">
+                <h4>路演厅</h4>
+                <p>ROADSHOW HALL</p>
+                <div class="arrow"></div>
+              </div>
+            </div>
+            <div class="sample-body">
+              <h3>导视牌</h3>
+              <p>蓝色竖栏建立导视体系，橙色箭头承担方向提示，信息层级清楚。</p>
+            </div>
+          </article>
+
+          <article class="sample">
+            <div class="sample-visual poster-visual">
+              <div class="poster">
+                <img src="logo.png" alt="FZ 标志">
+                <div class="poster-accent"></div>
+                <h4>AI 创新<br>工作坊</h4>
+                <div class="poster-band"></div>
+              </div>
+            </div>
+            <div class="sample-body">
+              <h3>活动海报</h3>
+              <p>适合讲座、工作坊、路演。图形模块提供节奏，文字保持直接。</p>
+            </div>
+          </article>
+
+          <article class="sample">
+            <div class="sample-visual social-visual">
+              <div class="social">
+                <img src="logo.png" alt="FZ 标志">
+                <h4>文化 × 科技<br>项目发布</h4>
+              </div>
+            </div>
+            <div class="sample-body">
+              <h3>公众号封面 / 电子屏</h3>
+              <p>数字端可放大色块关系，但正式品牌识别仍使用原 logo。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="office">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-no">06 / OFFICE MATERIALS</div>
+          <div>
+            <h2>办公物料：建立日常使用的统一秩序</h2>
+            <p class="lead">办公物料不追求复杂装饰，重点是清楚、稳定、可复制。logo 与字标作为正式识别，蓝色竖栏负责统一边界，橙色用于信息层级。</p>
+          </div>
+        </div>
+
+        <div class="material-system">
+          <div class="material-board" aria-label="办公物料组合示意">
+            <div class="material-card letterhead">
+              <img src="logo.png" alt="FZ 标志">
+              <div class="thin-line"></div>
+              <div class="text-line" style="width:86%"></div>
+              <div class="text-line" style="width:74%"></div>
+              <div class="text-line" style="width:92%"></div>
+            </div>
+            <div class="material-card envelope-card">
+              <img src="logo.png" alt="FZ 标志">
+            </div>
+            <div class="material-card folder-card">
+              <img src="logo-transparent.png" alt="透明底 FZ 标志">
+              <h4>项目资料<br>PROJECT FILE</h4>
+            </div>
+          </div>
+          <div class="material-notes">
+            <div class="material-note">
+              <h3>名片 / 信纸 / 信封</h3>
+              <p>使用横版中英组合。版面左侧或顶部固定蓝色结构，联系人信息、地址、二维码放入稳定网格。</p>
+            </div>
+            <div class="material-note">
+              <h3>文件夹 / 资料袋</h3>
+              <p>适合使用深色底和黄色倾斜模块，强化科技感。logo 保持原彩，放在左上或右上。</p>
+            </div>
+            <div class="material-note">
+              <h3>PPT / 模板文件</h3>
+              <p>封面使用大标题和辅助图形，内页减少装饰，只保留蓝色标题栏、橙色重点线和页码系统。</p>
+            </div>
+            <div class="material-note">
+              <h3>工牌 / 胸牌 / 桌牌</h3>
+              <p>优先使用竖版组合。颜色可根据人员类型或空间功能做区分，但不改变 logo 本身。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="communication">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-no">07 / COMMUNICATION MATERIALS</div>
+          <div>
+            <h2>传播物料：让活动、推文和电子屏看起来属于同一品牌</h2>
+            <p class="lead">传播端可以更有动势，但不能散。标题、日期、地点、主视觉和二维码都进入统一网格，黄色倾斜模块只作为关键动势出现。</p>
+          </div>
+        </div>
+
+        <div class="material-system">
+          <div class="communication-board" aria-label="传播物料组合示意">
+            <div class="comm-item poster-system">
+              <img src="logo.png" alt="FZ 标志">
+              <p>WORKSHOP / 2026</p>
+              <h3>AI 创新<br>工作坊海报</h3>
+            </div>
+            <div class="comm-item screen-system">
+              <img src="logo-transparent.png" alt="透明底 FZ 标志">
+              <p>DIGITAL SCREEN</p>
+              <h3>电子屏<br>欢迎画面</h3>
+            </div>
+            <div class="comm-item invite-system">
+              <img src="logo.png" alt="FZ 标志">
+              <p>INVITATION</p>
+              <h3>路演邀请函</h3>
+            </div>
+            <div class="comm-item social-system">
+              <img src="logo.png" alt="FZ 标志">
+              <p>WECHAT COVER</p>
+              <h3>公众号封面<br>推文头图</h3>
+            </div>
+          </div>
+          <div class="material-notes">
+            <div class="material-note">
+              <h3>活动海报</h3>
+              <p>标题占画面主体，logo 固定在左上或右上。蓝色负责结构，橙色负责活动信息，黄色负责视觉动势。</p>
+            </div>
+            <div class="material-note">
+              <h3>电子屏 / 背景板</h3>
+              <p>远距离观看优先级最高。减少小字，保留品牌名称、活动主题、时间地点和一个明显的图形动势。</p>
+            </div>
+            <div class="material-note">
+              <h3>公众号封面</h3>
+              <p>适合使用短英文和大标题。不要把画面填满，保留白底或蓝底，让 logo 和标题更清楚。</p>
+            </div>
+            <div class="material-note">
+              <h3>邀请函 / 易拉宝</h3>
+              <p>采用竖向信息流：logo、主题、说明、时间地点、二维码。底部可使用橙色条作为收口。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="rules">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-no">08 / BOUNDARY</div>
+          <div>
+            <h2>延展边界：什么不能做</h2>
+            <p class="lead">VI 延展的目的不是创造第二个标志。所有物料可以变化版式和辅助图形，但正式 logo 必须原样出现。</p>
+          </div>
+        </div>
+
+        <div class="forbid-grid">
+          <div class="forbid"><strong>不能改颜色</strong><span>不把蓝橙黄替换成其他品牌色。</span></div>
+          <div class="forbid"><strong>不能改比例</strong><span>不压扁、拉伸、重排原 logo。</span></div>
+          <div class="forbid"><strong>不能改角度</strong><span>黄色模块的原始倾斜关系不调整。</span></div>
+          <div class="forbid"><strong>不能做新标</strong><span>辅助图形不能和文字组合成替代 logo。</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-no">09 / FIRST ROUND OUTPUT</div>
+          <div>
+            <h2>第一轮可继续深化的交付清单</h2>
+            <p class="lead">这份页面先解决总体方向。进入最终交付时，再补充精确尺寸、材质、工艺、印刷色值和施工规范。</p>
+          </div>
+        </div>
+
+        <div class="deliver">
+          <div><strong>基础规范</strong><span>标志组合、标准色、字体、安全区、最小尺寸、禁用规范。</span></div>
+          <div><strong>图形系统</strong><span>辅助图形、重复图案、倾斜动势、版式网格。</span></div>
+          <div><strong>办公物料</strong><span>名片、信纸、文件夹、PPT、工牌、手提袋。</span></div>
+          <div><strong>空间导视</strong><span>前台墙、门牌、导视牌、玻璃贴、地贴、展墙。</span></div>
+          <div><strong>传播物料</strong><span>海报、公众号封面、电子屏、活动背景板、邀请函。</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span>芳洲国际文化科创中心 VI 视觉延展方案</span>
+      <span>Logo source: logo.png · 原 logo 未做改动</span>
+    </div>
+  </footer>
+</body>
+</html>
